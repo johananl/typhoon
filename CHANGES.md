@@ -11,7 +11,12 @@ Notable changes between versions.
 
 #### AWS
 
+* Allow using Flatcar Linux Edge by setting `os_image` to flatcar-edge
 * Only set internal VXLAN rules when `networking` is flannel (default: calico)
+
+#### Bare-Metal
+
+* Allow using Flatcar Linux Edge by setting `os_channel` to flatcar-edge
 
 #### DigitalOcean
 

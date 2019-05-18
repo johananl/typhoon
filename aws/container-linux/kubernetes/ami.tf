@@ -6,6 +6,10 @@ locals {
 
   flavor  = "${element(split("-", var.os_image), 0)}"
   channel = "${element(split("-", var.os_image), 1)}"
+  # Terraform ternary operators evaluate both sides and aws_ami's errors if an
+  # AMI match isn't found. To allow flatcar-edge, the coreos AMI lookup should
+  # default to stable (there is no edge) and be ignored
+  coreos_channel = "${contains(list("stable", "beta", "alpha"), local.channel) ? local.channel : "stable" }"
 }
 
 data "aws_ami" "coreos" {
@@ -24,7 +28,7 @@ data "aws_ami" "coreos" {
 
   filter {
     name   = "name"
-    values = ["CoreOS-${local.channel}-*"]
+    values = ["CoreOS-${local.coreos_channel}-*"]
   }
 }
 

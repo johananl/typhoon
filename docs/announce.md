@@ -18,9 +18,9 @@ Thank you Project Atomic team members for your work! - dghubble
 
 Starting in v1.10.3, Typhoon AWS and bare-metal `container-linux` modules allow picking between the Red Hat [Container Linux](https://coreos.com/os/docs/latest/) (formerly CoreOS Container Linux) and Kinvolk [Flatcar Linux](https://www.flatcar-linux.org/) operating system. Flatcar Linux serves as a drop-in compatible "friendly fork" of Container Linux. Flatcar Linux publishes the same channels and versions as Container Linux and gets provisioned, managed, and operated in an identical way (e.g. login as user "core").
 
-On AWS, pick the Container Linux derivative channel by setting `os_image` to coreos-stable, coreos-beta, coreos-alpha, flatcar-stable, flatcar-beta, or flatcar-alpha.
+On AWS, pick the Container Linux derivative channel by setting `os_image` to coreos-stable, coreos-beta, coreos-alpha, flatcar-stable, flatcar-beta, flatcar-alpha, or flatcar-edge.
 
-On bare-metal, pick the Container Linux derivative channel by setting `os_channel` to coreos-stable, coreos-beta, coreos-alpha, flatcar-stable, flatcar-beta, or flatcar-alpha. Set the `os_version` number to PXE boot and install. Variables `container_linux_channel` and `container_linux_version` have been dropped.
+On bare-metal, pick the Container Linux derivative channel by setting `os_channel` to coreos-stable, coreos-beta, coreos-alpha, flatcar-stable, flatcar-beta, flatcar-alpha, or flatcar-edge. Set the `os_version` number to PXE boot and install. Variables `container_linux_channel` and `container_linux_version` have been dropped.
 
 Flatcar Linux provides a familar Container Linux experience, with support from Kinvolk as an alternative to Red Hat. Typhoon offers the choice of Container Linux vendor to satisfy differing preferences and to diversify technology underpinnings, while providing a consistent Kubernetes experience across operating systems, clouds, and on-premise.
 
